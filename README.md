@@ -7,9 +7,9 @@
 
 # Assignment Title Lab 2 Enumerable methods and Bootstrap
 
-## Purpose - The goal of this assignment is to develop your undserstanding of:
-- The Model View Controller design pattern
-- The Services Collection and Dependency Injection
+## Purpose - The goal of this assignment is to develop your understanding of:
+- The methods available for filtering data that are part of the Enumerable class
+- Bootstrap to create responsive and professional looking UI
 
 # Instructions
 
