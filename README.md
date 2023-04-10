@@ -5,7 +5,7 @@
 </div>
 <br>
 
-# Assignment Title Lab 1 Using MVC and Services
+# Assignment Title Lab 2 Enumerable methods and Bootstrap
 
 ## Purpose - The goal of this assignment is to develop your undserstanding of:
 - The Model View Controller design pattern
@@ -14,33 +14,28 @@
 # Instructions
 
 ## Task 1: Clone this repository to your local machine and open the included .Net 6 MVC project (10 pts)
+ - You notice that you have been provided an Album model located in the Models folder
+ - There is also an AlbumList class that is located in the Data folder
 
-## Task 2: Create a Model to represent a vehicle based on the following criteria: (10 pts)
+## Task 2: Register the AlbumList.CS with the Services Collection using dependency injection. (10 pts)
 
-- int Id
-- Year, Make, Model, Price, Mileage and MPG all need to be recorded. Choose the data type for each that you think is best
+- Create in interface IAlbumList.CS that will provide access to the GetAlbums() method inside of AlbumList.CS
+- Use the interface to register the AlbumList with the services container
 
-## Task 3: Create a Vehicle Controller with Two Actions Index() and Details(int id) (15 pts)
+## Task 3: Create an Album Controller (30 pts)
 
-- On load of the Controller create a List of Vehicles and add at least three vehicles to the list.
-- In the Index Action pass the full list of vehicles to a View and display the info about them
-- In the Details Action take in an ID parameter and pass the vehicle with the matching ID to the View and display the info about that vehicle
-    - If no vehicle is found matching that ID return NotFound()
+- Use dependency injection to provide access to the AlbumList. Remember that the controller should rely on the Interface and not the concrete class.
+- Create Endpoints and Views for the following:
+    - Index() Action should display all of all Albums in the List in the Index View in a Bootstrap Table
+    - Details(int id) Action should take an Id and display the Details View with info about the album with a matching ID
+        - If no Album Matches the ID return NotFound()
+    - Create() Action should give the user a Bootstrap HTML Form to create a new Album on GET. On POST Add the Album to the List
+    - The Edit(int id) is like a combination of details and create. 
+        - It is similar to edit in that it will take in an id and send an album to the view as a model. 
+        - It is similar to create in that it will have a get and post. 
+        - Data will come back from the form to update the information about the album. Try to create Edit based on your knowledge of Create and Details. 
 
-## Task 4: Create a service that calculates annual cost of ownership of a vehicle (15 pts)
-
-- Create an IVehicleCostCalculator interface
-- The IVehicleCostCalculator interface has one method
-    - decimal CalculateCost(Vehicle vehicle, int milesDriven)
-- Create a Concrete VehicleCostCalculator class that implements IVehicleCostCalculator
-    - The CalculateCost method should return the annual cost of fuel based on the miles driven of the car (choose a reasonable price for a gallon of gas) + 10% of the Price of the car as a depreciation estimate.
-- Register this service with the service collection.
-- Inject this service into the VehicleController
-    - Create a CalculateCost(int id, int milesDriven) endpoint in the vehicle controller 
-    - When the endpoint is hit use the service and pass the Vehicle with the matching ID and milesDriven to the VehicleCostCalculator Service
-    - Display the result. You can create a view or you can simply return Content() with the result
-
-## Task 5: When complete create a commit with the note "Submission for Lab 1" and push the changes to the repository
+## Task 5: When complete create a commit with the note "Submission for Lab 2" and push the changes to the repository
 
 # Tips for success
 - Commit early and often. As you complete each step create a new commit.
