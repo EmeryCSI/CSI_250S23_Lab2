@@ -5,11 +5,11 @@
 </div>
 <br>
 
-# Assignment Title Lab 2 Enumerable methods and Bootstrap
+# Lab 2 Enumerable methods and Bootstrap
 
-## Purpose - The goal of this assignment is to develop your undserstanding of:
-- The Model View Controller design pattern
-- The Services Collection and Dependency Injection
+## Purpose - The goal of this assignment is to develop your understanding of:
+- The methods available for filtering data that are part of the Enumerable class
+- Bootstrap to create responsive and professional looking UI
 
 # Instructions
 
@@ -30,9 +30,9 @@
     - Details(int id) Action should take an Id and display the Details View with info about the album with a matching ID
         - If no Album Matches the ID return NotFound()
     - Create() Action should give the user a Bootstrap HTML Form to create a new Album on GET. On POST Add the Album to the List
-    - The Edit(int id) is like a combination of details and create. 
-        - It is similar to edit in that it will take in an id and send an album to the view as a model. 
-        - It is similar to create in that it will have a get and post. 
+    - The Edit(int id) is like a combination of Details and Create. 
+        - It is similar to Details in that it will take in an id and send an album to the view as a model. 
+        - It is similar to Create in that it will have a GET and POST. 
         - Data will come back from the form to update the information about the album. Try to create Edit based on your knowledge of Create and Details. 
 
 ## Task 5: When complete create a commit with the note "Submission for Lab 2" and push the changes to the repository
