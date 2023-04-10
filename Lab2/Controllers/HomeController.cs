@@ -1,5 +1,4 @@
-﻿using Lab2.Data;
-using Lab2.Models;
+﻿using Lab2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,7 +7,7 @@ namespace Lab2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        AlbumList list = new AlbumList();
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -16,7 +15,7 @@ namespace Lab2.Controllers
 
         public IActionResult Index()
         {
-            return Json(list.GetAlbums());  
+            return View();
         }
 
         public IActionResult Privacy()
