@@ -5,7 +5,7 @@
 </div>
 <br>
 
-# Assignment Title Lab 2 Enumerable methods and Bootstrap
+# Lab 2 Enumerable methods and Bootstrap
 
 ## Purpose - The goal of this assignment is to develop your understanding of:
 - The methods available for filtering data that are part of the Enumerable class
