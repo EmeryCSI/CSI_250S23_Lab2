@@ -1,7 +1,7 @@
 <div align="center">  
     <img src="Images/logo.jpg" alt="Logo">
     <h2>Renton Technical College</h2>
-    <h3>CSI-250</h3>
+    <h3>CSI-244</h3>
 </div>
 <br>
 
